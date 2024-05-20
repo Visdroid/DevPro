@@ -67,6 +67,4 @@ public class CreateWebsiteDirectories {
             e.printStackTrace();
         }
     }
-
-    
 }
