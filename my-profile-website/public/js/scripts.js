@@ -3,8 +3,16 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
 
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
     const phone = document.getElementById('phone').value;
+    const message = document.getElementById('message').value;
+
+    //Regular expression to validate South African phone numbers in E.164 format
+    const saPhoneRegex = /^\+27\d{9}$/;
+
+    if(!saPhoneRegex.test(phone)){
+        alert('Please enter a valid South African phone number in E.164 format(e.g., +27123456789).');
+        return;
+    }
 
     fetch('/contact', {
         method: 'POST',
