@@ -13,15 +13,20 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
-app.use('/contac',contactRoute);
+app.use(bodeParser.json());
 
 //Connecting to MongoDB
 mongoose.connect(process.env.MONGO_URI,{ useNewUrlParser: true, userUnifiedTopology: true})
 .then(() => console.log('MongoDB connected...'))
 .catch(err => console.log(err));
 
-app.listen(port, () => {
-    console.log('Server running on port ${port}');
+//Simple route
+app.get('/',(req, res) =>{
+    res.send("Hello World");
+
+    app.listen(PORT, ()=>{
+        console.log('Server running on http://localhost:${PORT}');
+    });
 });
 
 

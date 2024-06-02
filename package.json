@@ -1,7 +1,7 @@
 {
-  "name": "my-profile-website",
+  "name": "devpro",
   "version": "1.0.0",
-  "description": "",
+  "description": "A profile of the type of developer I am, by describing to you what I have done and a summary of all the tools and skills I use to develop Websites,app etc.",
   "main": "server/server.js",
   "scripts": {
     "start": "nodemon server/server.js"
@@ -13,7 +13,9 @@
     "body-parser": "^1.20.2",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "mongoose": "^8.4.0",
+    "mongoose": "^8.4.0"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.0"
   }
 }
